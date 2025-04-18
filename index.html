@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Uday Kiran's Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Header -->
+  <div id="header">
+    <div class="container">
+      <nav>
+        <img src="logo.png" class="logo" alt="Logo" />
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+        </ul>
+      </nav>
+      <div class="header-text">
+        <p>CSE STUDENT</p>
+        <h1>Hi, I'm <span>Uday Kiran</span><br />From SRM University</h1>
+      </div>
+    </div>
+  </div>
+
+  <!-- About -->
+  <div id="about">
+    <div class="container">
+      <div class="row">
+        <div class="about-col-1">
+          <img src="user.jpeg" alt="Profile" />
+        </div>
+        <div class="about-col-2">
+          <h1 class="sub-title">About Me</h1>
+          <p>Hi! I'm Uday Kiran, a B.Tech 2nd year student at SRM University, passionate about technology, innovation, and continuous learning. I enjoy exploring the world of software development, building real-world projects, and sharpening my problem-solving skills every day.
+            <br>Currently, I’m working on developing a Digital Learning Management System called EduTech.
+            <br>I’m open to internships, collaborations, and opportunities where I can grow and contribute meaningfully.</p>
+
+          <div class="tab-titles">
+            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+            <p class="tab-links" onclick="opentab('education')">Education</p>
+            <p class="tab-links" onclick="opentab('projects')">Projects</p>
+          </div>
+
+          <div class="tab-contents active-tab" id="skills">
+            <ul>
+              <li><span>Technical Skills</span><br>Programming, Web Development, DBMS, Core CS, Problem Solving</li>
+              <li><span>Soft Skills</span><br>Time Management, Communication, Adaptability, Team Collaboration</li>
+            </ul>
+          </div>
+
+          <div class="tab-contents" id="education">
+            <ul>
+              <li><span>B.Tech</span><br>GPA: 8.0 (Ongoing)</li>
+              <li><span>Intermediate</span><br>90%</li>
+              <li><span>Secondary</span><br>100% (COVID)</li>
+            </ul>
+          </div>
+
+          <div class="tab-contents" id="projects">
+            <ul>
+              <li><span>C++</span><br>Online Food Ordering System</li>
+              <li><span>Python</span><br>Expense Tracker</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Gallery -->
+  <div id="gallery">
+    <h2 class="sub-title">My Gallery</h2>
+    <div class="gallery-grid">
+      <img src="srm.jpeg" alt="Gallery 1" />
+      <img src="srmap.jpeg" alt="Gallery 2" />
+      <img src="museum.jpg" alt="Gallery 3" />
+      <img src="nature.jpg" alt="Gallery 4" />
+    </div>
+  </div>
+
+  <!-- Contact -->
+  <div id="contact">
+    <h2 class="sub-title">Contact Me</h2>
+    <form action="contact.php" method="post">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+
+  <!-- Social Media -->
+  <div id="social-media">
+    <h2 class="sub-title">Connect with Me</h2>
+    <div class="social-icons">
+      <a href=" https://linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=uday-kiran-bairi-8416a9291" target="_blank"><img src="Linkedin.png.jpeg" alt="LinkedIn" /></a>
+      <a href="https://ffshare.garena.com/?region=IND&lang=en" target="_blank"><img src="freefire.png.jpeg" alt="freefire" /></a>
+      <a href="https://twitter.com/yourusername" target="_blank"><img src="twitter.png.jpeg" alt="GitHub" /></a>
+      <a href="https://www.instagram.com/mr_uday_1729?igsh=MXJqYmVkeWoyc3Fzcw==" target="_blank"><img src="inastagram.png.jpeg" alt="Instagram" /></a>
+    </div>
+  </div>
+
+  <script>
+    function opentab(tabname) {
+      let tablinks = document.getElementsByClassName("tab-links");
+      let tabcontents = document.getElementsByClassName("tab-contents");
+      for (let i of tablinks) i.classList.remove("active-link");
+      for (let j of tabcontents) j.classList.remove("active-tab");
+      event.currentTarget.classList.add("active-link");
+      document.getElementById(tabname).classList.add("active-tab");
+    }
+  </script>
+</body>
+</html>
